@@ -15,11 +15,11 @@ SELECT DISTINCT rating FROM film;
 -- A customer forgot their wallet we need to track them down. What is the email for the customer Nancy Thomas?
 
 SELECT email FROM customer
-WHERE first_name = 'Nancy'
-AND last_name = 'Thomas';
+<br>WHERE first_name = 'Nancy'
+<br>AND last_name = 'Thomas';
 
 -- A customer wants to know the description for the movie "Outlaw Hanky".
 
 SELECT description FROM film
-WHERE title = 'Outlaw Hanky';
+<br>WHERE title = 'Outlaw Hanky';
 
