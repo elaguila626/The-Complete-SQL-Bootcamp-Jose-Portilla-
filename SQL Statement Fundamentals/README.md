@@ -67,3 +67,14 @@ SELECT COUNT (DISTINCT(district)) -- SELECTing the COUNT of each DISTINCT distri
 
 SELECT DISTINCT(district) 
 <br> FROM address;
+
+-- How many films have a rating of R and a replacement cost between $5 and $15?
+     
+SELECT COUNT(*) FROM film
+<br> WHERE rating = 'R'
+<br> AND replacement_cost BETWEEN 5 AND 15;
+
+-- How many films have the word Truman somewhere in the title?
+
+SELECT COUNT(*) FROM film
+<br> WHERE title LIKE '%Truman%';
