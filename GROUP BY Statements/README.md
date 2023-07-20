@@ -11,3 +11,11 @@ SELECT staff_id, COUNT(amount)
 SELECT rating, AVG (replacement_cost)
 <br> FROM film
 <br> GROUP BY rating;
+
+-- We are running a promotion to reward our top 5 customers. What are the customer ids of the top 5 customers by total spend? 
+
+SELECT customer_id, SUM(amount)
+<br> FROM payment
+<br> GROUP BY customer_id
+<br> ORDER BY SUM(amount) DESC
+<br> LIMIT 5; 
