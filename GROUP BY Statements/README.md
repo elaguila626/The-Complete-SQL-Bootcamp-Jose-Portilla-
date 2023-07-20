@@ -19,3 +19,20 @@ SELECT customer_id, SUM(amount)
 <br> GROUP BY customer_id
 <br> ORDER BY SUM(amount) DESC
 <br> LIMIT 5; 
+
+## HAVING
+-- We are launching a platinum service for our most loyal customers. We will assign platinum status to customers that have had 40 or more transaction payments. What customer_id's are eligible for platinum status?
+
+SELECT customer_id, COUNT(* )
+<br> FROM payment
+<br> GROUP BY customer_id
+<br> HAVING COUNT (*) >= 40; 
+
+-- What are the customer ids of customers who have spent more than $100 in payment transactions with our staff_id member 2?
+
+SELECT customer_id, SUM(amount)
+<br> FROM payment
+<br> WHERE staff_id = 2
+<br> GROUP BY customer_id
+<br> HAVING SUM(amount) > 100; 
+
